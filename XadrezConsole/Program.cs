@@ -11,14 +11,11 @@ namespace XadrezConsole
         {
             try
             {
-                Tabuleiro tab = new Tabuleiro(8, 8);
+                PosJogo pos = new PosJogo('a', 1);
 
-                tab.InsertPeca(new Rei(tab, Color.Branca), new Posicao(0, 0));
-                tab.InsertPeca(new Torre(tab, Color.Preta), new Posicao(1, 3));
-                tab.InsertPeca(new Rainha(tab, Color.Preta), new Posicao(2, 5));
-                tab.InsertPeca(new Rainha(tab, Color.Preta), new Posicao(9, 5));
+                Console.WriteLine(pos);
 
-                Tela.printTab(tab);
+                Console.WriteLine(pos.toPosicao());
             }
             catch (TabuleiroException e) {
                 Console.WriteLine(e.Message);
